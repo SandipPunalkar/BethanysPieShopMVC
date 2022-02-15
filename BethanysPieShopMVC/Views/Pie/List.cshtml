@@ -13,7 +13,7 @@
             <img src="@pie.ImageThumbnailUrl" alt="" />
             <div class="card-body">
                 <h3 class="float-right">@pie.Price.ToString("c")</h3>
-                <h3><a href="#">@pie.Name</a></h3>
+                <h3><a asp-controller="Pie" asp-action="Details" asp-route-id="@pie.PieId">@pie.Name</a></h3>
                 <p>@pie.ShortDescription</p>
             </div>
         </div>
