@@ -12,6 +12,8 @@
         public string ImageThumbnailUrl { get; set; }
         public bool IsPieOfTheWeek { get; set; }
         public bool InStock { get; set; }
+        public string Notes { get; set; }
+
 
         //Navugation property
         public int CategoryId { get; set; }
