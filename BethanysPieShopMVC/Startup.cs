@@ -29,6 +29,11 @@ namespace BethanysPieShopMVC
 
             services.AddScoped<IPieRepository, PieRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            
+            services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+            services.AddHttpContextAccessor();
+
+            services.AddSession();
 
             services.AddControllersWithViews();
         }
@@ -45,6 +50,9 @@ namespace BethanysPieShopMVC
                 app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
+            
+            //Add session middleware
+            app.UseSession();
 
             app.UseRouting();
 
