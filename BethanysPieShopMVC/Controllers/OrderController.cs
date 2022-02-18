@@ -5,9 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using BethanysPieShopMVC.Repository;
 using BethanysPieShopMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BethanysPieShopMVC.Controllers
 {
+    [Authorize]
     public class OrderController : Controller
     {
         private readonly IOrderRepository _orderRepository;
