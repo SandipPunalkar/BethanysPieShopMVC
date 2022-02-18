@@ -6,42 +6,53 @@
 
 <form asp-action="CheckOut" method="post">
     <h4>You're just one step away from your delicious pies.</h4>
+    <div asp-validation-summary="All" class="text-danger"></div>
+
 
     <div class="form-group">
         <label asp-for="FirstName"></label>
         <input class="form-control" asp-for="FirstName" placeholder="First Name">
+        <span asp-validation-for="FirstName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="LastName"></label>
         <input class="form-control" asp-for="LastName" placeholder="Last Name">
+        <span asp-validation-for="LastName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="AddressLine1"></label>
         <input class="form-control" asp-for="AddressLine1" placeholder="AddressLine1">
+        <span asp-validation-for="AddressLine1" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="AddressLine2"></label>
         <input class="form-control" asp-for="AddressLine2" placeholder="AddressLine2">
+        <span asp-validation-for="AddressLine2" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="ZipCode"></label>
         <input class="form-control" asp-for="ZipCode" placeholder="Zip Code">
+        <span asp-validation-for="ZipCode" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="City"></label>
         <input class="form-control" asp-for="City" placeholder="City">
+        <span asp-validation-for="City" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="State"></label>
         <input class="form-control" asp-for="State" placeholder="State">
+        <span asp-validation-for="State" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Country"></label>
         <input class="form-control" asp-for="Country" placeholder="Country">
+        <span asp-validation-for="Country" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Email"></label>
         <input class="form-control" asp-for="Email" placeholder="Email">
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary">Complete Order</button>
 </form>
