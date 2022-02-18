@@ -1,0 +1,47 @@
+﻿@model Order
+
+@{
+    ViewData["Title"] = "CheckOut Page";
+}
+
+<form asp-action="CheckOut" method="post">
+    <h4>You're just one step away from your delicious pies.</h4>
+
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input class="form-control" asp-for="FirstName" placeholder="First Name">
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input class="form-control" asp-for="LastName" placeholder="Last Name">
+    </div>
+    <div class="form-group">
+        <label asp-for="AddressLine1"></label>
+        <input class="form-control" asp-for="AddressLine1" placeholder="AddressLine1">
+    </div>
+    <div class="form-group">
+        <label asp-for="AddressLine2"></label>
+        <input class="form-control" asp-for="AddressLine2" placeholder="AddressLine2">
+    </div>
+    <div class="form-group">
+        <label asp-for="ZipCode"></label>
+        <input class="form-control" asp-for="ZipCode" placeholder="Zip Code">
+    </div>
+    <div class="form-group">
+        <label asp-for="City"></label>
+        <input class="form-control" asp-for="City" placeholder="City">
+    </div>
+    <div class="form-group">
+        <label asp-for="State"></label>
+        <input class="form-control" asp-for="State" placeholder="State">
+    </div>
+    <div class="form-group">
+        <label asp-for="Country"></label>
+        <input class="form-control" asp-for="Country" placeholder="Country">
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input class="form-control" asp-for="Email" placeholder="Email">
+    </div>
+    <button type="submit" class="btn btn-primary">Complete Order</button>
+</form>
